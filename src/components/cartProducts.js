@@ -42,12 +42,14 @@ export const CartProducts = (props) => {
                if (act === 'hapus') { removeCart(prod.id, yyy); yyy = 0 }
                inpRef.current[prod.id].value = yyy.toString()
             }
-            let idid = "cart" + prod.id
-            const popup = document.getElementById(idid)
             const openPopup = () => {
+               let idid = "cart" + prod.id
+               const popup = document.getElementById(idid)
                popup.classList.replace('hidden', 'flex')
             }
             const closePopup = () => {
+               let idid = "cart" + prod.id
+               const popup = document.getElementById(idid)
                popup.classList.replace('flex', 'hidden')
             }
             return (
