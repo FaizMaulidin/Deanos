@@ -22,7 +22,7 @@ const WishProducts = (props) => {
          if (prod.id === props.prodId) {
 
             const added = () => {
-               const el = document.getElementById('btn-add-cart')
+               const el = document.getElementById('btn-add-cart' + prod.id)
                el.classList.add('bg-rose-700')
                el.classList.replace('text-rose-700', 'text-zinc-100')
                el.innerHTML = "Added to cart"
@@ -53,7 +53,7 @@ const WishProducts = (props) => {
                         <button onClick={() => popup(prod.id, 'open')} className='border-[1px] border-zinc-500 rounded-md px-2' >
                            <FontAwesomeIcon icon={faTrashCan} />
                         </button>
-                        <button id='btn-add-cart' onClick={() => {
+                        <button id={'btn-add-cart' + prod.id} onClick={() => {
                            addCart(prod.id, 1)
                            added()
                         }} className='border-[1px] border-rose-700 rounded-md px-2 text-rose-700 transition-all duration-500 ease-in-out' >+ Add to cart</button>
