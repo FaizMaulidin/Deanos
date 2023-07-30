@@ -11,3 +11,5 @@ Live Demo: [Deano's Shop](https://deanos.vercel.app/)
 - Tailwind CSS
 
 ## Preview of Deano's
+
+![deanosPic](https://github.com/FaizMaulidin/Deanos/assets/104049423/b6176dab-11ca-4cfa-a14a-c409de9fd465)
