@@ -17,10 +17,10 @@ export const Cards = (props) => {
       }
    }, { threshold: 0.8 })
 
-   ref.current.map((el) => {
-      if (el != undefined) {
+   useEffect(() => {
+      ref.current.map((el) => {
          observer.observe(el)
-      }
+      })
    })
 
    return UsingDucts().map((prod) => {
