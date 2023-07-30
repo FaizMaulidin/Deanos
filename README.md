@@ -6,7 +6,7 @@ Live Demo: [Deano's Shop](https://deanos.vercel.app/)
 
 ## Build with:
 
-- HTML
+- JavaScript
 - React JS
 - Tailwind CSS
 
