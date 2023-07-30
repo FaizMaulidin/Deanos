@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { UsingDucts, addCart, removeWish } from './api'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faTrashCan } from '@fortawesome/free-solid-svg-icons'
@@ -6,18 +6,20 @@ import { Link } from 'react-router-dom'
 
 const WishProducts = (props) => {
 
+   const popup = (id, act) => {
+      let idWish = "wish" + id
+      const wishPopup = document.getElementById(idWish)
+
+      if (act === 'open'){
+         return wishPopup.classList.replace('hidden', 'flex')
+      } else {
+         return wishPopup.classList.replace('flex', 'hidden')
+      }
+   }
+
    return UsingDucts().map((prod) => {
       if (props.wishlist === true) {
          if (prod.id === props.prodId) {
-
-            let idWish = "wish" + prod.id
-            const wishPopup = document.getElementById(idWish)
-            const openPopup = () => {
-               wishPopup.classList.replace('hidden', 'flex')
-            }
-            const closePopup = () => {
-               wishPopup.classList.replace('flex', 'hidden')
-            }
 
             const added = () => {
                const el = document.getElementById('btn-add-cart')
@@ -48,7 +50,7 @@ const WishProducts = (props) => {
                         </div>
                      </Link>
                      <div className="flex justify-end text-zinc-500 text-lg px-6 md:px-0 pt-7 md:pt-4 gap-2 sm:gap-4 lg:gap-2 lg:text-base">
-                        <button onClick={openPopup} className='border-[1px] border-zinc-500 rounded-md px-2' >
+                        <button onClick={() => popup(prod.id, 'open')} className='border-[1px] border-zinc-500 rounded-md px-2' >
                            <FontAwesomeIcon icon={faTrashCan} />
                         </button>
                         <button id='btn-add-cart' onClick={() => {
@@ -60,8 +62,8 @@ const WishProducts = (props) => {
                         <div className="bg-zinc-100 px-4 py-5 rounded-[0.25rem] w-[65vw] text-zinc-600 sm:w-[40vw] md:w-[35vw] lg:w-72">
                            <div className="pb-4 border-b-[1px] border-zinc-400 text-base">Remove this item from wishlist?</div>
                            <div className="py-1 flex gap-5 justify-end font-bold">
-                              <button onClick={closePopup}>Cancel</button>
-                              <button onClick={() => { removeWish(prod.id); closePopup() }} className="text-rose-600">OK</button>
+                              <button onClick={() => popup(prod.id, 'close')}>Cancel</button>
+                              <button onClick={() => { removeWish(prod.id); popup(prod.id, 'close') }} className="text-rose-600">OK</button>
                            </div>
                         </div>
                      </div>
