@@ -7,8 +7,8 @@ import Footer from '../components/footer'
 
 const Products = (props) => {
    return UsingDucts().map((prod) => {
-      const inp = document.querySelector('.addcart input')
       if (prod.id == props.id) {
+         const inp = document.querySelector('.addcart input')
          const love = document.querySelector('.love')
          ray.map((item) => {
             if (prod.id === item.productId && item.wishlist === true) {
