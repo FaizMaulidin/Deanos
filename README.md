@@ -8,7 +8,7 @@ Live Demo: [Deano's Shop](https://deanos.vercel.app/)
 
 - JavaScript
 - React JS
-- Tailwind CSS tes ganti coba
+- Tailwind CSS
 
 ## Preview of Deano's
 
