@@ -1,9 +1,9 @@
 import './App.css';
 import { FlashSale } from './components/flashSale';
-import { Navbar } from './components/navbar';
+import { Navbar } from './components/nonAPI/navbar';
 import { ShopNow } from './components/nonAPI/bannerShopNow';
 import { CategBanner } from './components/nonAPI/bannerCategories';
-import { Wrapper } from './components/mostRatedWrap';
+import { Wrapper } from './components/nonAPI/mostRatedWrap';
 import Footer from './components/nonAPI/footer';
 
 const App = () => {

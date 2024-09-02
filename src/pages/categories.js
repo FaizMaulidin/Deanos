@@ -2,14 +2,30 @@ import { faAnglesUp } from "@fortawesome/free-solid-svg-icons"
 import { UsingDucts } from "../components/api"
 import AllCard from "../components/categories/allProdCard"
 import CategTopList from "../components/categories/categTopList"
-import { Navbar } from "../components/navbar"
+import { Navbar } from "../components/nonAPI/navbar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { ScrollPosition } from "../components/navScroll"
+import { ScrollPosition } from "../components/nonAPI/navScroll"
 import Footer from "../components//nonAPI/footer"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import axios from "axios"
 
 
 export const Categories = (props) => {
+    const [data, setData] = useState([{def: 'default'}])
+
+    useEffect(() => {
+        let ignore = false
+        const fetchData = async() => {
+            const prod = await axios.get("https://fakestoreapi.com/products/category/jewelery")
+            if(!ignore){
+                setData(prod.data)
+                console.log(prod.data)
+            }
+        }
+        fetchData()
+
+        return () => ignore = true
+    }, [props.cond])
 
     let pos = ScrollPosition().scrollPos
     const el = document.querySelector('.up')
@@ -32,9 +48,14 @@ export const Categories = (props) => {
                         UsingDucts().map((prod, i) => {
                             if (prod.category == props.cond) {
                                 return (
-                                    <AllCard key={i} image={prod.image} title={prod.title} price={prod.price} rate={prod.rating.rate} link={"/products/" + prod.id} />
+                                    <AllCard key={i} prod={prod} link={"/products/" + prod.id} />
                                 )
                             }
+                        })
+                    }
+                    {
+                        data.map((prod, i) => {
+                            return <AllCard key={i} prod={prod} link={"/products/" + prod.id}/>
                         })
                     }
                 </div>

@@ -1,4 +1,4 @@
-import { Cards } from "./mostRated"
+import { Cards } from "../mostRated"
 
 export const Wrapper = () => {
 

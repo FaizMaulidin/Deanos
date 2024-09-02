@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { UsingDucts, addCart, addWish, ray, removeWish } from '../components/api'
-import { Navbar } from '../components/navbar'
+import { Navbar } from '../components/nonAPI/navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
 import Footer from '../components/nonAPI/footer'
