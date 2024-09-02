@@ -5,7 +5,7 @@ import CategTopList from "../components/categories/categTopList"
 import { Navbar } from "../components/navbar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ScrollPosition } from "../components/navScroll"
-import Footer from "../components/footer"
+import Footer from "../components//nonAPI/footer"
 import { useEffect } from "react"
 
 

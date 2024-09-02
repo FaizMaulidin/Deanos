@@ -2,7 +2,7 @@ import { UsingDucts, addCart, removeCart } from "./api"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheck, faTrashCan, faStar } from "@fortawesome/free-solid-svg-icons"
 import React, { useEffect, useRef } from "react"
-import { UpTotalPrice } from "./cartLogic"
+import { UpTotalPrice } from "./nonAPI/cartLogic"
 import { Link } from "react-router-dom"
 
 export const CartProducts = (props) => {

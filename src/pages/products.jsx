@@ -3,7 +3,7 @@ import { UsingDucts, addCart, addWish, ray, removeWish } from '../components/api
 import { Navbar } from '../components/navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
-import Footer from '../components/footer'
+import Footer from '../components/nonAPI/footer'
 
 const Products = (props) => {
    const [getInp, setInp] = useState()

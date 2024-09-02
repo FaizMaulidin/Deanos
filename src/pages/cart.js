@@ -1,11 +1,11 @@
 import { CartProducts } from "../components/cartProducts"
 import { useEffect, useState, useRef } from "react"
-import { UpTotalPrice } from "../components/cartLogic"
+import { UpTotalPrice } from "../components/nonAPI/cartLogic"
 import { ray } from "../components/api"
 import { Navbar } from "../components/navbar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheck } from "@fortawesome/free-solid-svg-icons"
-import Footer from "../components/footer"
+import Footer from "../components//nonAPI/footer"
 
 export const Cart = () => {
    const [comps, setComps] = useState([])

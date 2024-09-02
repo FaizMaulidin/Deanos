@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Navbar } from '../components/navbar'
-import Footer from '../components/footer'
+import Footer from '../components/nonAPI/footer'
 import WishProducts from '../components/wishProducts'
 import { ray } from '../components/api'
 

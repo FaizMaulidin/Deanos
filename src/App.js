@@ -1,11 +1,10 @@
 import './App.css';
 import { FlashSale } from './components/flashSale';
 import { Navbar } from './components/navbar';
-import { ShopNow } from './components/bannerShopNow';
-import { CategBanner } from './components/bannerCategories';
+import { ShopNow } from './components/nonAPI/bannerShopNow';
+import { CategBanner } from './components/nonAPI/bannerCategories';
 import { Wrapper } from './components/mostRatedWrap';
-import Footer from './components/footer';
-import { Link } from 'react-router-dom';
+import Footer from './components/nonAPI/footer';
 
 const App = () => {
 
