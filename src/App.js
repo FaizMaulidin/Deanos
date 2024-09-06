@@ -6,6 +6,7 @@ import { CategBanner } from './components/bannerCategories';
 import { Wrapper } from './components/mostRatedWrap';
 import Footer from './components/footer';
 import { Link } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const App = () => {
 
@@ -41,6 +42,7 @@ const App = () => {
          </section>
          <ShopNow quote='Experience the cutting-edge technology of our latest gadget.' bg='bg-gadget' link='/categories/electronics' />
          <Footer />
+         <SpeedInsights/>
       </>
    )
 }
