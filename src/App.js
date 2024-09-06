@@ -5,6 +5,7 @@ import { ShopNow } from './components/nonAPI/bannerShopNow';
 import { CategBanner } from './components/nonAPI/bannerCategories';
 import { Wrapper } from './components/nonAPI/mostRatedWrap';
 import Footer from './components/nonAPI/footer';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const App = () => {
 
@@ -40,6 +41,7 @@ const App = () => {
          </section>
          <ShopNow quote='Experience the cutting-edge technology of our latest gadget.' bg='bg-gadget' link='/categories/electronics' />
          <Footer />
+         <SpeedInsights/>
       </>
    )
 }
